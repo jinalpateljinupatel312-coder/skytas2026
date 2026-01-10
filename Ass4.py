@@ -1,0 +1,2 @@
+name = "jinal"
+print(name.upper())
