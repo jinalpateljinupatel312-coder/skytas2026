@@ -1,8 +1,6 @@
 
-num = int(input("Enter a number:"))
+sentence = input("Enter a sentence:")
 
-if num % 2 == 0:
-    print("The number is Even")
-else:
-    print("The number is odd")
+lowercase_sentence = sentence.lower()
 
+print("lowercase sentence:", lowercase_sentence)

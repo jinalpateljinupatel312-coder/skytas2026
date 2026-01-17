@@ -1,8 +1,6 @@
 
-num_str = input("Enter a number:")
+name = input("Enter your name:")
 
-num = int(num_str)
+age =input("Enter your age:")
 
-result = num * 10
-
-print("Result:", result)
+print(f"Hello, {name}! you are {age} years old.")

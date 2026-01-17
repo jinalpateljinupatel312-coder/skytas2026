@@ -1,9 +1,5 @@
+text = input("Enter a string: ")
 
-a = int(input("Enter first number:"))
-b = int(input("Enter second number"))
+reversed_text = text[::-1]
 
-if a == b:
-    print("Both number are equal")
-
-else:
-    print("The numbers are not equal")
+print("Reversed string:", reversed_text)

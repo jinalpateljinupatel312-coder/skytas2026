@@ -1,9 +1,7 @@
 
-a = int(input("Enter first number:"))
-b = int(input("Enter second number:"))
+text = input("Enter a string:")
+letter = input("Enter the letter to count: ")
 
-if a > 0 and b > 0:
-    print(True)
+count = text.count(letter)
 
-else:
-    print(False)
+print(f" The letter '{letter}' appears {count} times in the string.")

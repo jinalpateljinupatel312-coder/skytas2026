@@ -1,9 +1,7 @@
-# Input a number
-num = int(input("Enter a number: "))
 
-# Check multiple conditions
-# Example: number should be positive AND even, OR equal to 15
-if (num > 0 and num % 2 == 0) or num == 15:
-    print("Condition met!")
-else:
-    print("Condition not met!")
+text = " Hello, world!"
+
+clean_text = text.strip()
+
+print(f"original: '{text}'")
+print(f"cleaned:'{clean_text}")

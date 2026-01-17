@@ -1,6 +1,6 @@
 
-a = int(input("Enter first number: "))
-b = int(input("Enter second number:"))
+user_input = input("Enter a string: ")
 
-remainder = a % b
-print("Remainder is:", remainder)
+length_of_string = len(user_input)
+
+print("The length of the string is:", length_of_string)

@@ -1,8 +1,13 @@
 
-num = int(input("Enter a number:"))
+text = input("Enter a string:")
 
-square = num **2
-cube = num **3
+if len(text) > 0:
+    first_char = text[0]
+    last_char = text[-1]
+    print("first character:", first_char)
+    print("last character:", last_char)
 
-print("square of the number",square)
-print("cube of the number:", cube)
+else:
+    print("The string is empty!")
+
+text = input("Enter a string:")
