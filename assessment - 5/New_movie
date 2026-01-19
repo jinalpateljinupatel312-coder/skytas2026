@@ -1,0 +1,8 @@
+movies = ["Inception", "Titanic", "Interstellar"]
+
+new_movie = input("Enter a movie name to add: ")
+movies.append(new_movie)
+
+print("Updated movie list:")
+for movie in movies:
+    print("-", movie)
