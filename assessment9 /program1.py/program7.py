@@ -1,0 +1,13 @@
+class Jinal():
+    def __init__(self):
+        self.__age = 0
+
+    def set_age(self, age):
+        self.__age = age
+    
+    def get_age(self):
+        return self.__age
+    
+j = Jinal()
+j.set_age(20)
+print(j.get_age())
