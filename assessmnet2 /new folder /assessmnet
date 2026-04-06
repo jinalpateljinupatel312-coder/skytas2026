@@ -1,0 +1,109 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Student
+{
+    // Private fields (Encapsulation)
+    private int studentId;
+    private string name;
+    private string department;
+    private int year;
+    private int marks;
+
+    // Constructor
+    public Student(int studentId, string name, string department, int year, int marks)
+    {
+        this.studentId = studentId;
+        this.name = name;
+        this.department = department;
+        this.year = year;
+        this.marks = marks;
+    }
+
+    // Getters and Setters
+    public int StudentId
+    {
+        get { return studentId; }
+        set { studentId = value; }
+    }
+
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+
+    public string Department
+    {
+        get { return department; }
+        set { department = value; }
+    }
+
+    public int Year
+    {
+        get { return year; }
+        set { year = value; }
+    }
+
+    public int Marks
+    {
+        get { return marks; }
+        set { marks = value; }
+    }
+
+    // Display Method
+    public void Display()
+    {
+        Console.WriteLine($"ID: {studentId}, Name: {name}, Dept: {department}, Year: {year}, Marks: {marks}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create multiple student objects
+        List<Student> students = new List<Student>()
+        {
+            new Student(1, "Jinal", "IT", 3, 85),
+            new Student(2, "Rahul", "CS", 2, 70),
+            new Student(3, "Priya", "IT", 3, 90),
+            new Student(4, "Amit", "EC", 1, 65),
+            new Student(5, "Neha", "CS", 4, 78)
+        };
+
+        // 1. Display all students
+        Console.WriteLine("\n--- All Students ---");
+        foreach (var s in students)
+        {
+            s.Display();
+        }
+
+        // 2. Students with marks > 75
+        Console.WriteLine("\n--- Students with Marks > 75 ---");
+        var highScorers = students.Where(s => s.Marks > 75);
+        foreach (var s in highScorers)
+        {
+            s.Display();
+        }
+
+        // 3. Sort students by marks
+        Console.WriteLine("\n--- Students Sorted by Marks ---");
+        var sorted = students.OrderByDescending(s => s.Marks);
+        foreach (var s in sorted)
+        {
+            s.Display();
+        }
+
+        // 4. Top 3 scorers
+        Console.WriteLine("\n--- Top 3 Scorers ---");
+        var top3 = students.OrderByDescending(s => s.Marks).Take(3);
+        foreach (var s in top3)
+        {
+            s.Display();
+        }
+
+        Console.ReadLine();
+    }
+}
